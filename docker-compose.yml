@@ -1,0 +1,7 @@
+version: '3'
+services:
+  sbe:
+    image: sbe
+    container_name: sbe
+    ports:
+      - 8081:8080

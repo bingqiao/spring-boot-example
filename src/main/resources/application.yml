@@ -1,0 +1,20 @@
+server:
+  servlet:
+    context-path: /api/v1
+
+spring:
+  jpa:
+    generate-ddl: true
+  datasource:
+    hikari:
+      maximumPoolSize: 20
+
+---
+spring:
+  profiles: postgres
+  datasource:
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.ProgressDialect
